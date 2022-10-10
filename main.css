@@ -76,11 +76,12 @@ footer {
     flex-basis: 60%;
 }
 
+.table .col-1,
 .table .col-2,
 .table .col-3
  {
     flex-basis: 20%;
-    min-width: 80px;
+    min-width: 90px;
 }
 
 .table .col-1,
