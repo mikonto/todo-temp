@@ -74,9 +74,9 @@ footer {
 
 .table .col-1 {
     flex-basis: 60%;
+    min-width: 90px;
 }
 
-.table .col-1,
 .table .col-2,
 .table .col-3
  {
