@@ -2,7 +2,7 @@ body {
     height: 100vh;
     font-family: 'Courier New', Courier, monospace;
     display: grid;
-    grid-template-columns: fit-content(250px) auto;
+    grid-template-columns: 200px auto;
     grid-template-rows: 50px auto 50px;
     grid-template-areas: 
     "header header"
@@ -10,22 +10,20 @@ body {
     "nav footer";
   }
 
-body.no-scroll {
-    /* overflow: hidden; */
+.no-scroll {
+    overflow: hidden;
 }
 
-@media (max-width: 700px) {
-    body {
-        grid-template-rows: 50px auto auto 50px;
-        grid-template-areas: 
-        "header header"
-        "nav nav"
-        "main main"
-        "footer footer";
-    }
+.display-none {
+    display: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 header {
+    padding: 1rem;
     background-color: #154360;
     color: white;
     grid-area: header;
@@ -33,6 +31,7 @@ header {
 }
 
 nav {
+    padding: 1rem;
     grid-area: nav;
     background-color: #D4E6F1;
 }
@@ -41,56 +40,52 @@ nav p {
     font-weight: bold;
 }
 
-nav ul {
+.nav__todo-lists {
     list-style-type: none;
     padding: 0; 
     display: flex;
     flex-direction: column;
 }
 
-nav ul li {
+.nav__todo-lists li {
+    margin: 8px;
+    cursor: pointer;
+}
+
+.nav__add-new {
+    
+    align-self: flex-start;
     margin: 8px;
 }
 
-.table-title {
+.title {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin: 0 10px 0 10px;
 }
 
-.finished > li{
-    text-decoration: line-through;
-}
-
-.finished > .table-row {
-    color: gray;
+.table-row > div {
+    cursor: pointer
 }
 
 main {
+    padding: 1rem;
     grid-area: main;
 }
 
-footer {
-    grid-area: footer;
-    text-align: center;
-}
-
-header,
-main,
-nav,
-footer {
-    padding: 1rem;
+.main__delete {
+    color: red;
 }
 
 /* Table */
-.table {
+.main__table {
     padding-inline-start: 0px;
-    /* padding-inline-end: 0px; */
     margin: 10px;
 }
 
-.table li {
+.main__table__header,
+.main__table__row {
     border-radius: 3px;
     padding: 25px;
     display: flex;
@@ -98,130 +93,52 @@ footer {
     margin-bottom: 25px;
 }
 
-.table .table-header {
+.main__table__header {
     background-color: #95A5A6;
     padding: 20px;
 }
 
-.table .table-row {
+.main__table__row {
     background-color: #ffffff;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 }
 
-.table .col-0 {
+.main__table__column-0 {
     min-width: 20px;
 }
 
-.table .col-1 {
+.main__table__column-1 {
     flex-basis: 60%;
     min-width: 90px;
 }
 
-.table .col-2
- {
+.main__table__column-2 {
     flex-basis: 20%;
     min-width: 90px;
 }
 
-.table .col-2,
-.table .col-3
- {
+.main__table__column-2,
+.main__table__column-3 {
     flex-basis: 20%;
 }
 
-.table .col-0,
-.table .col-1,
-.table .col-2 {
+.main__table__column-0,
+.main__table__column-1,
+.main__table__column-2 {
     margin-right: 30px;
 }
 
-.checkbox {
-    width: 20px;
+.main__new-task {
+    margin-left: 10px;
 }
 
-.modal .checkbox {
-    margin-right: 30px;
+footer {
+    padding: 1rem;
+    grid-area: footer;
+    text-align: center;
 }
 
-main .new-task-btn {
-    margin: 0 10px 10px 10px;
-}
-
-@media all and (max-width: 700px) {
-    nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-    } 
-
-    nav ul p {
-        width: 100%;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 10px 10px 0 10px;
-    }
-    
-    .table .table-header {
-        display: none;
-    }
-    
-    .table li {
-        display: grid;
-        grid-template-areas: 
-        "l1 r1"
-        "l2 r2"
-        "l3 r3";
-    }
-
-    .table .col-0 {
-        width: 20px;
-        grid-area: l1;
-    } 
-
-    .table .col-1 {
-        grid-area: r1;
-    }
-
-    .table .col-1::before {
-        content: "Task: ";
-    }
-
-    .table .col-2 {
-        grid-area: r2;
-    }
-
-    .table .col-2::before {
-        content: "Due date: ";
-    }
-
-    .table .col-3 {
-        grid-area: r3;
-    }
-
-    .table .col-3::before {
-        content: "Priority: ";
-    }
-
-    .table .col-1,
-    .table .col-2,
-    .table .col-3 {
-        padding-bottom: 14px;
-        margin: 0;
-    }
-
-    .table .col-1::before,
-    .table .col-2::before,
-    .table .col-3::before {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 3px;
-    }
-}
-
-/* Modal background */
 .modal {
-    display: none; 
     position: fixed;
     z-index: 1;
     padding-top: 70px;
@@ -230,64 +147,136 @@ main .new-task-btn {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4);
   }
-  
-/* Modal */
-.modal-task {
+
+.modal__window {
     background-color: #fefefe;
     margin: auto;
     margin-bottom: 20vh;
     padding: 20px;
     border: 1px solid #888;
     border-radius: 3px;
-    width: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
-.modal-visible {
-    display: block;
+.modal__window__close {
+    padding-bottom: 0px;
+    color: #aaaaaa;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 18px;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.modal__window__close:hover,
+.modal__window__close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-@media all and (max-width: 700px) { 
-    .modal-task {
-        width: 80%;
-    }
-}
-
-.modal-content {
-    margin: 20px;
-}
-
-.modal-content .details-title {
+.modal__window__title {
     padding: 8px;
     border-radius: 3px;
     font-weight: bold;
     background-color: #95A5A6;
 }
 
-.button-float-right {
-    float: right;
+.modal__window p {
+    margin-top: 0;
 }
 
-.modal button {
-    margin-top: 20px;
-}
-  
-.modal-task .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-  
-.modal-task .close:hover,
-.modal-task .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.modal__window__buttons {
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 1em;
 }
 
-.modal-task .delete-btn {
+.modal__window__delete-btn {
     color: red;
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-rows: 50px fit-content(10px) auto 50px;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+    }
+
+    nav {
+        padding: 0 1rem 0 1rem;
+    }
+
+    .nav__todo-lists {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .main__table__header {
+        display: none;
+    }
+    
+    .main__table__row {
+        display: grid;
+        grid-template-areas: 
+        "left_1 right_1"
+        "left_2 right_2"
+        "left_3 right_3";
+    }
+
+    .main__table__column-0 {
+        grid-area: left_1;
+    } 
+
+    .main__table__column-1 {
+        grid-area: right_1;
+    }
+
+    .main__table__column-1:before {
+        content: "Task: ";
+    }
+
+    .main__table__column-2 {
+        grid-area: right_2;
+    }
+
+    .main__table__column-2::before {
+        content: "Due date: ";
+    }
+
+    .main__table__column-3 {
+        grid-area: right_3;
+    }
+
+    .main__table__column-3::before {
+        content: "Priority: ";
+    }
+
+    .main__table__column-1,
+    .main__table__column-2,
+    .main__table__column-3 {
+        padding-bottom: 14px;
+        margin: 0;
+    }
+
+    .main__table__column-1::before,
+    .main__table__column-2::before,
+    .main__table__column-3::before {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    .modal__window {
+        width: 80%;
+    }
 }

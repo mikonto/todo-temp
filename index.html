@@ -16,97 +16,70 @@
   <!-- NAV -->
   <nav>
     <p>Lists:</p>
-    <ul id="todo-lists">
+    <ul class="nav__todo-lists">
+      <li>Default</li>
+      <li>Second project</li>
+      <li>Third project</li>
+      <button class="nav__add-new">Add new</button>
     </ul>
-    <button id="main-add-new-btn">Add new</button>
+    
   </nav>
   <!-- MAIN -->
   <main>
-    <div class="table-title" >
+    <div class="title">
       <h3>Default</h3>
       <div>
-        <button id="main-edit-btn">Edit</button>
-        <button id="main-delete-btn">Delete</button>
+        <button class="main__delete">Delete</button>
       </div>
     </div>
-    <ul class="table" id="table">
-      <li class="table-header">
-        <div class="col-0"></div>
-        <div class="col-1">Task</div>
-        <div class="col-2">Due Date</div>
-        <div class="col-3">Priority</div>
-      </li>
 
-    </ul>
-    <button id="new-task-btn">New task</button>
-    <!-- FINISHED TASKS TABLE -->
-    <div class="table-title" >
-      <h3>Finished tasks</h3>
-    </div>
-
-    <ul class="table finished" id="table-finished">
-      <li class="table-header">
-        <div class="col-0"></div>
-        <div class="col-1">Task</div>
-        <div class="col-2">Due Date</div>
-        <div class="col-3">Priority</div>
+    <ul class="main__table">
+      <li class="main__table__header">
+        <div class="main__table__column-0"></div>
+        <div class="main__table__column-1">Task</div>
+        <div class="main__table__column-2">Due Date</div>
+        <div class="main__table__column-3">Priority</div>
       </li>
-      <li class="table-row">
-        <div class="col-0"><img src="img/checkbox.svg" class="checkbox"></div>
-        <div class="col-1">Buy groceries. Long long long long long long long long text.</div>
-        <div class="col-2">10.10.2022</div>
-        <div class="col-3">High</div>
+      <li class="main__table__row">
+        <div class="main__table__column-0"><img src="img/checkbox.svg"></div>
+        <div class="main__table__column-1">Buy groceries. Long long long long long long long long text.</div>
+        <div class="main__table__column-2">10.10.2022</div>
+        <div class="main__table__column-3">High</div>
       </li>
-      <li class="table-row">
-        <div class="col-0"><img src="img/checkbox.svg" class="checkbox"></div>
-        <div class="col-1">Clean the house</div>
-        <div class="col-2">11.10.2022</div>
-        <div class="col-3">Medium</div>
-      </li>
-      <li class="table-row">
-        <div class="col-0"><img src="img/checkbox.svg" class="checkbox"></div>
-        <div class="col-1">Go to the gym</div>
-        <div class="col-2">12.10.2022</div>
-        <div class="col-3">Low</div>
+      <li class="main__table__row">
+        <div class="main__table__column-0"><img src="img/checkbox.svg"></div>
+        <div class="main__table__column-1">Clean the house</div>
+        <div class="main__table__column-2">11.10.2022</div>
+        <div class="main__table__column-3">Medium</div>
       </li>
     </ul>
+
+    <button class="main__new-task">New task</button>
 
     <!-- MODAL SHOW DETAILS-->
-    <div class="modal">
-      <div class="modal-task">
-        <span class="close">&times;</span>
-        <div class="modal-content">
-          <h3>Details</h3>
-          <p class="details-title">Title:</p>
+    <div class="modal display-none">
+      <div class="modal__window">
+          <div class="modal__window__close">&times;</div>
+          <p class="modal__window__title">Title:</p>
           <p>Buy groceries. Long long long long long long long long text.</p>
-          <p class="details-title">Description:</p>
+          <p class="modal__window__title">Description:</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse sed nisi lacus sed viverra.</p>
-          <p class="details-title">Due date:</p>
+          <p class="modal__window__title">Due date:</p>
           <p>11.10.2022</p>
-          <p class="details-title">Priority:</p>
+          <p class="modal__window__title">Priority:</p>
           <p>High</p>
-          <p class="details-title">Notes:</p>
+          <p class="modal__window__title">Notes:</p>
           <p>Senectus et netus et malesuada fames ac. Nam at lectus urna duis convallis convallis tellus id.</p>
-          <p class="details-title">Checklist:</p>
-          <form>
-            <input type="checkbox" id="checkbox1">
-            <label for="checkbox1">Potatoes</label><br>
-            <input type="checkbox" id="checkbox2">
-            <label for="checkbox2">Milk</label><br>
-            <input type="checkbox" id="checkbox3">
-            <label for="checkbox3">Sugar</label><br><br>
-          </form>
-          <button>Close</button>
-          <div class="button-float-right">
-            <button>Edit</button>
-            <button class="delete-btn" >Delete</button>
+          <div class="modal__window__buttons">
+              <button>Edit</button>
+              <button class="modal__window__delete-btn">Delete</button>
           </div>
-        </div>
+       
       </div>
     </div>
 
-    <!-- MODAL CREATE NEW-->
-    <div class="modal">
+    <!-- MODAL CREATE NEW -->
+    <!-- <div class="modal">
       <div class="modal-task">
         <span class="close">&times;</span>
         <div class="modal-content">
@@ -133,13 +106,13 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </main>
 
   <footer>
         By Mikonto
   </footer>
 
-  <script src="main.js"></script>
+  <!-- <script src="main.js"></script> -->
 </body>
 </html>
