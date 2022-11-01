@@ -185,7 +185,7 @@ footer {
     cursor: pointer;
 }
 
-.modal__window__title {
+.modal__window__header {
     padding: 8px;
     border-radius: 3px;
     font-weight: bold;
