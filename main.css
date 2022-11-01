@@ -58,7 +58,7 @@ nav p {
     margin: 8px;
 }
 
-.title {
+.main__top {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
