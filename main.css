@@ -34,6 +34,10 @@ header {
     font-weight: bold;
 }
 
+.header__logo {
+    cursor: pointer;
+}
+
 nav {
     padding: 1rem;
     grid-area: nav;
