@@ -18,6 +18,7 @@
     <p>Lists:</p>
     <ul class="nav__todo-lists">
     </ul>
+    <div class="nav__clear-localstorage">Clear library</div>
   </nav>
   <!-- MAIN -->
   <main>
@@ -53,11 +54,10 @@
           <p class="modal__window__priority">High</p>
           <p class="modal__window__header">Notes:</p>
           <p class="modal__window__notes">Senectus et netus et malesuada fames ac. Nam at lectus urna duis convallis convallis tellus id.</p>
-          <div class="modal__window__buttons">
+          <div class="modal__window__bottom">
               <button>Edit</button>
               <button class="modal__window__delete-btn">Delete</button>
           </div>
-       
       </div>
     </div>
 
@@ -65,9 +65,25 @@
     <div class="modal modal--new display-none">
       <div class="modal__window modal--new__window">
         <span class="modal__window__close modal--new__window__close">&times;</span>
+          <label for="modal--new__form__title" class="modal__window__header">Title:</label>
+          <input class="modal--new__form-input" type="text" id="modal--new__form__title">
 
+          <label for="modal--new__form__description" class="modal__window__header">Description:</label>
+          <input class="modal--new__form-input" type="text" id="modal--new__form__description">
 
+          <label for="modal--new__form__due-date" class="modal__window__header">Due date:</label>
+          <input class="modal--new__form-input" type="text" id="modal--new__form__due-date">
 
+          <label for="modal--new__form__priority" class="modal__window__header">Priority:</label>
+          <input class="modal--new__form-input" type="text" id="modal--new__form__priority">
+
+          <label for="modal--new__form__notes" class="modal__window__header">Notes:</label>
+          <input class="modal--new__form-input" type="text" id="modal--new__form__notes">
+
+          <div class="modal__window__bottom">
+            <div class="note"></div>
+              <button class="modal--new__window__add">Add</button>
+          </div>
         </div>
       </div>
     </div>
