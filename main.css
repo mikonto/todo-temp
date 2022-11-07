@@ -42,8 +42,7 @@ nav {
     padding: 1rem;
     grid-area: nav;
     background-color: #D4E6F1;
-    display: grid;
-    grid-template-rows: 30px auto 25px;
+
 }
 
 nav p {
@@ -68,12 +67,7 @@ nav p {
     margin: 8px;
 }
 
-.nav__clear-localstorage {
-    width: 100%;
-    cursor: pointer;
-    color: red;
-    margin-left: 8px;
-}
+
 
 .main__top {
     display: flex;
@@ -212,7 +206,7 @@ footer {
     display: flex;
     color: red;
     justify-content: space-between;
-    margin-top: 1em;
+    margin-top: 0.8em;
 }
 
 .modal__window__delete-btn {
@@ -220,7 +214,7 @@ footer {
 }
 
 .modal--new__form {
-  
+
     display: flex;
     flex-direction: column;
     align-content: center;

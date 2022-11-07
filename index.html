@@ -18,7 +18,7 @@
     <p>Lists:</p>
     <ul class="nav__todo-lists">
     </ul>
-    <div class="nav__clear-localstorage">Clear library</div>
+
   </nav>
   <!-- MAIN -->
   <main>
@@ -72,16 +72,22 @@
           <input class="modal--new__form-input" type="text" id="modal--new__form__description">
 
           <label for="modal--new__form__due-date" class="modal__window__header">Due date:</label>
-          <input class="modal--new__form-input" type="text" id="modal--new__form__due-date">
+          <input class="modal--new__form-input" type="date" id="modal--new__form__due-date">
 
           <label for="modal--new__form__priority" class="modal__window__header">Priority:</label>
-          <input class="modal--new__form-input" type="text" id="modal--new__form__priority">
+          <!-- <input class="modal--new__form-input" type="text" id="modal--new__form__priority"> -->
+
+          <select name="modal--new__form__priority" id="modal--new__form__priority" class="modal--new__form-input">
+            <option value="Low">Low</option>
+            <option value="Normal" selected>Normal</option>
+            <option value="High">High</option>
+          </select>
 
           <label for="modal--new__form__notes" class="modal__window__header">Notes:</label>
-          <input class="modal--new__form-input" type="text" id="modal--new__form__notes">
+          <textarea class="modal--new__form-input" id="modal--new__form__notes"></textarea>
 
           <div class="modal__window__bottom">
-            <div class="note"></div>
+            <div class="modal--new__window__note"></div>
               <button class="modal--new__window__add">Add</button>
           </div>
         </div>
