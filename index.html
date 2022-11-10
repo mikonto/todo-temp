@@ -11,84 +11,102 @@
 <body>
   <!-- HEADER -->
   <header>
-    <div class="header__logo">✔️ Todo List</div>
+    <div class="header_logo">✔️ Todo List</div>
   </header>
   <!-- NAV -->
   <nav>
     <p>Lists:</p>
-    <ul class="nav__todo-lists">
+    <ul class="nav_todo-lists">
     </ul>
 
   </nav>
   <!-- MAIN -->
   <main>
-    <div class="main__top">
-      <h3 class="main__top__title">Default</h3>
+    <div class="main_top">
+      <h3 class="main_top_title">Default</h3>
       <div>
-        <button class="main__delete">Delete</button>
+        <button class="main_delete">Delete</button>
       </div>
     </div>
 
-    <ul class="main__table">
-      <li class="main__table__header">
-        <div class="main__table__column-0"></div>
-        <div class="main__table__column-1">Task</div>
-        <div class="main__table__column-2">Due Date</div>
-        <div class="main__table__column-3">Priority</div>
+    <ul class="main_table">
+      <li class="main_table_header">
+        <div class="main_table_column-0"></div>
+        <div class="main_table_column-1">Task</div>
+        <div class="main_table_column-2">Due Date</div>
+        <div class="main_table_column-3">Priority</div>
       </li>
     </ul>
 
-    <button class="main__new-task">New task</button>
+    <button class="main_new-task">New task</button>
 
     <!-- MODAL SHOW DETAILS-->
     <div class="modal display-none">
-      <div class="modal__window">
-          <div class="modal__window__close">&times;</div>
-          <p class="modal__window__header">Title:</p>
-          <p class="modal__window__title">Buy groceries. Long long long long long long long long text.</p>
-          <p class="modal__window__header">Description:</p>
-          <p class="modal__window__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse sed nisi lacus sed viverra.</p>
-          <p class="modal__window__header">Due date:</p>
-          <p class="modal__window__due-date" >11.10.2022</p>
-          <p class="modal__window__header">Priority:</p>
-          <p class="modal__window__priority">High</p>
-          <p class="modal__window__header">Notes:</p>
-          <p class="modal__window__notes">Senectus et netus et malesuada fames ac. Nam at lectus urna duis convallis convallis tellus id.</p>
-          <div class="modal__window__bottom">
-              <button>Edit</button>
-              <button class="modal__window__delete-btn">Delete</button>
-          </div>
+      <div class="modal_window">
+        <div class="modal_window_top">
+          <span class="modal_window_error"></span>
+          <div class="modal_window_close">&times;</div>
+        </div>
+          
+        <div class="modal_window_middle">
+          <p class="modal_window_header">Title:</p>
+          <p class="modal_window_title">Buy groceries. Long long long long long long long long text.</p>
+          <p class="modal_window_header">Description:</p>
+          <p class="modal_window_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse sed nisi lacus sed viverra.</p>
+          <p class="modal_window_header">Due date:</p>
+          <p class="modal_window_due-date" >11.10.2022</p>
+          <p class="modal_window_header">Priority:</p>
+          <p class="modal_window_priority">High</p>
+          <p class="modal_window_header">Notes:</p>
+          <p class="modal_window_notes">Senectus et netus et malesuada fames ac. Nam at lectus urna duis convallis convallis tellus id.</p>
+          <div class="modal_window_header_subtask display-none">Sub-tasks:</div>
+        </div>
+
+        <div class="modal_window_bottom">
+            <button>Edit</button>
+            <button class="modal_window_delete">Delete</button>
+        </div>
       </div>
     </div>
 
     <!-- MODAL CREATE NEW -->
-    <div class="modal modal--new display-none">
-      <div class="modal__window modal--new__window">
-        <span class="modal__window__close modal--new__window__close">&times;</span>
-          <label for="modal--new__form__title" class="modal__window__header">Title:</label>
-          <input class="modal--new__form-input" type="text" id="modal--new__form__title">
+    <div class="modal_new display-none">
+      <div class="modal_new_window">
+        <div class="modal_new_window_top">
+          <span class="modal_new_window_error"></span>
+          <span class="modal_new_window_close">&times;</span>
+        </div>
 
-          <label for="modal--new__form__description" class="modal__window__header">Description:</label>
-          <input class="modal--new__form-input" type="text" id="modal--new__form__description">
+        <div class="modal_new_window_middle">
+          <label for="modal_new_form_title" class="modal_new_window_header">Title:</label>
+          <input class="modal_new_form_input" type="text" id="modal_new_form_title">
 
-          <label for="modal--new__form__due-date" class="modal__window__header">Due date:</label>
-          <input class="modal--new__form-input" type="date" id="modal--new__form__due-date">
+          <label for="modal_new_form_description" class="modal_new_window_header">Description:</label>
+          <input class="modal_new_form_input" type="text" id="modal_new_form_description">
 
-          <label for="modal--new__form__priority" class="modal__window__header">Priority:</label>
-          <!-- <input class="modal--new__form-input" type="text" id="modal--new__form__priority"> -->
+          <label for="modal_new_form_due-date" class="modal_new_window_header">Due date:</label>
+          <input class="modal_new_form_input" type="date" id="modal_new_form_due-date">
 
-          <select name="modal--new__form__priority" id="modal--new__form__priority" class="modal--new__form-input">
+          <label for="modal_new_form_priority" class="modal_new_window_header">Priority:</label>
+          <!-- <select name="form_priority" id="modal_new_form_priority" class="modal_new_form_input"> -->
+          <select id="modal_new_form_priority" class="modal_new_form_input">
             <option value="Low">Low</option>
             <option value="Normal" selected>Normal</option>
             <option value="High">High</option>
           </select>
 
-          <label for="modal--new__form__notes" class="modal__window__header">Notes:</label>
-          <textarea class="modal--new__form-input" id="modal--new__form__notes"></textarea>
+          <label for="modal_new_form_notes" class="modal_new_window_header">Notes:</label>
+          <textarea class="modal_new_form_input" id="modal_new_form_notes"></textarea>
 
-          <div class="modal__window__bottom">
-            <div class="modal--new__window__note"></div>
-              <button class="modal--new__window__add">Add</button>
+
+          <div class="modal_new_window_header_subtask display-none">Sub-tasks:</div>
+
+
+
+        </div>
+          <div class="modal_new_window_bottom">
+              <button class="modal_new_window_subtask-btn">Add sub-task</button>
+              <button class="modal_new_window_add">Create task</button>
           </div>
         </div>
       </div>

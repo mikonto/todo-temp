@@ -34,7 +34,7 @@ header {
     font-weight: bold;
 }
 
-.header__logo {
+.header_logo {
     cursor: pointer;
 }
 
@@ -49,27 +49,24 @@ nav p {
     font-weight: bold;
 }
 
-.nav__todo-lists {
+.nav_todo-lists {
     list-style-type: none;
     padding: 0; 
     display: flex;
     flex-direction: column;
 }
 
-.nav__todo-lists li {
+.nav_todo-lists li {
     margin: 8px;
     cursor: pointer;
 }
 
-.nav__add-new {
-    
+.nav_add-new {
     align-self: flex-start;
     margin: 8px;
 }
 
-
-
-.main__top {
+.main_top {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -81,18 +78,18 @@ main {
     grid-area: main;
 }
 
-.main__delete {
+.main_delete {
     color: red;
 }
 
 /* Table */
-.main__table {
+.main_table {
     padding-inline-start: 0px;
     margin: 10px;
 }
 
-.main__table__header,
-.main__table__row {
+.main_table_header,
+.main_table_row {
     border-radius: 3px;
     padding: 25px;
     display: flex;
@@ -100,46 +97,46 @@ main {
     margin-bottom: 25px;
 }
 
-.main__table__header {
+.main_table_header {
     background-color: #95A5A6;
     padding: 20px;
 }
 
-.main__table__row {
+.main_table_row {
     background-color: #ffffff;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 }
 
-.main__table__row--finished {
+.finished {
     text-decoration: line-through;
     color: #696969;
 }
 
-.main__table__column-0 {
+.main_table_column-0 {
     min-width: 20px;
     margin-right: 30px;
 }
 
-.main__table__column-1 {
+.main_table_column-1 {
     flex-basis: 60%;
     min-width: 90px;
     cursor: pointer;
     margin-right: 30px;
 }
 
-.main__table__column-2 {
+.main_table_column-2 {
     flex-basis: 20%;
     min-width: 90px;
     cursor: pointer;
     margin-right: 30px;
 }
 
-.main__table__column-3 {
+.main_table_column-3 {
     flex-basis: 20%;
     cursor: pointer;
 }
 
-.main__new-task {
+.main_new-task {
     margin-left: 10px;
 }
 
@@ -149,7 +146,8 @@ footer {
     text-align: center;
 }
 
-.modal {
+.modal,
+.modal_new {
     position: fixed;
     z-index: 1;
     padding-top: 70px;
@@ -161,7 +159,8 @@ footer {
     background-color: rgba(0,0,0,0.4);
   }
 
-.modal__window {
+.modal_window,
+.modal_new_window {
     background-color: #fefefe;
     margin: auto;
     margin-bottom: 20vh;
@@ -169,12 +168,11 @@ footer {
     border: 1px solid #888;
     border-radius: 3px;
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+
 }
 
-.modal__window__close {
+.modal_window_close,
+.modal_new_window_close {
     padding-bottom: 0px;
     color: #aaaaaa;
     margin-left: auto;
@@ -184,46 +182,90 @@ footer {
     font-weight: bold;
 }
   
-.modal__window__close:hover,
-.modal__window__close:focus {
+.modal_window_close:hover,
+.modal_window_close:focus,
+.modal_new_window_close:hover,
+.modal_new_window_close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-.modal__window__header {
+.modal_window_middle,
+.modal_new_window_middle {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.modal_window_header,
+.modal_new_window_header,
+.modal_new_window_header_subtask,
+.modal_window_header_subtask {
     padding: 8px;
     border-radius: 3px;
     font-weight: bold;
     background-color: #95A5A6;
 }
 
-.modal__window p {
+.modal_window p,
+.modal_new_window p {
     margin-top: 0;
 }
 
-.modal__window__bottom {
+.modal_window_bottom,
+.modal_new_window_bottom {
     display: flex;
     color: red;
     justify-content: space-between;
     margin-top: 0.8em;
 }
 
-.modal__window__delete-btn {
+.modal_window_delete {
     color: red;
 }
 
-.modal--new__form {
+.modal_window_top,
+.modal_new_window_top {
+    display: flex;
+}
 
+.modal_window_error,
+.modal_new_window_error {
+    padding-top: 18px;
+    color: red;
+}
+
+.modal_window_middle,
+.modal_new_middle {
     display: flex;
     flex-direction: column;
     align-content: center;
-      
 }
 
-.modal--new__form-input {
+.modal_form_input,
+.modal_new_form_input {
     /* margin-top: 8px; */
     margin-bottom: 14px;
+}
+
+.modal_new_window_subtask,
+.modal_window_subtask {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    height: 22px;
+}
+
+.modal_new_window_subtask_checkbox,
+.modal_window_subtask_checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.modal_new_window_subtask p,
+.modal_window_subtask p {
+    margin-top: 2px;
 }
 
 @media (max-width: 700px) {
@@ -301,7 +343,8 @@ footer {
         margin-bottom: 3px;
     }
 
-    .modal__window {
+    .modal_window,
+    .modal_new_window {
         width: 80%;
     }
 }
