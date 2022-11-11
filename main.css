@@ -228,7 +228,7 @@ footer {
     display: flex;
     color: red;
     justify-content: space-between;
-    margin-top: 2em;
+    margin-top: 1.4em;
 }
 
 .modal_window_delete,
