@@ -63,7 +63,7 @@
         </div>
 
         <div class="modal_window_bottom">
-            <button>Edit</button>
+            <button class="modal_window_edit">Edit</button>
             <button class="modal_window_delete">Delete</button>
         </div>
       </div>
@@ -88,7 +88,6 @@
           <input class="modal_new_form_input" type="date" id="modal_new_form_due-date">
 
           <label for="modal_new_form_priority" class="modal_new_window_header">Priority:</label>
-          <!-- <select name="form_priority" id="modal_new_form_priority" class="modal_new_form_input"> -->
           <select id="modal_new_form_priority" class="modal_new_form_input">
             <option value="Low">Low</option>
             <option value="Normal" selected>Normal</option>
@@ -98,10 +97,7 @@
           <label for="modal_new_form_notes" class="modal_new_window_header">Notes:</label>
           <textarea class="modal_new_form_input" id="modal_new_form_notes"></textarea>
 
-
           <div class="modal_new_window_header_subtask display-none">Sub-tasks:</div>
-
-
 
         </div>
           <div class="modal_new_window_bottom">
@@ -110,6 +106,46 @@
           </div>
         </div>
       </div>
+
+
+    <!-- MODAL EDIT -->
+    <div class="modal_edit display-none">
+      <div class="modal_edit_window">
+        <div class="modal_edit_window_top">
+          <span class="modal_edit_window_error"></span>
+          <span class="modal_edit_window_close">&times;</span>
+        </div>
+
+        <div class="modal_edit_window_middle">
+          <label for="modal_edit_form_title" class="modal_edit_window_header">Title:</label>
+          <input class="modal_edit_form_input" type="text" id="modal_edit_form_title">
+
+          <label for="modal_edit_form_description" class="modal_edit_window_header">Description:</label>
+          <input class="modal_edit_form_input" type="text" id="modal_edit_form_description">
+
+          <label for="modal_edit_form_due-date" class="modal_edit_window_header">Due date:</label>
+          <input class="modal_edit_form_input" type="date" id="modal_edit_form_due-date">
+
+          <label for="modal_edit_form_priority" class="modal_edit_window_header">Priority:</label>
+          <select class="modal_edit_form_input" id="modal_edit_form_priority">
+            <option value="Low">Low</option>
+            <option value="Normal" selected>Normal</option>
+            <option value="High">High</option>
+          </select>
+
+          <label for="modal_edit_form_notes" class="modal_edit_window_header">Notes:</label>
+          <textarea class="modal_edit_form_input" id="modal_edit_form_notes"></textarea>
+
+          <div class="modal_edit_window_header_subtask display-none">Sub-tasks:</div>
+
+        </div>
+          <div class="modal_edit_window_bottom">
+              <button class="modal_edit_window_subtask-btn">Add sub-task</button>
+              <button class="modal_edit_window_add">Save</button>
+          </div>
+        </div>
+      </div>
+    
     </div>
   </main>
 

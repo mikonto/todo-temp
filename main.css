@@ -147,7 +147,8 @@ footer {
 }
 
 .modal,
-.modal_new {
+.modal_new,
+.modal_edit {
     position: fixed;
     z-index: 1;
     padding-top: 70px;
@@ -160,7 +161,8 @@ footer {
   }
 
 .modal_window,
-.modal_new_window {
+.modal_new_window,
+.modal_edit_window {
     background-color: #fefefe;
     margin: auto;
     margin-bottom: 20vh;
@@ -172,7 +174,8 @@ footer {
 }
 
 .modal_window_close,
-.modal_new_window_close {
+.modal_new_window_close,
+.modal_edit_window_close {
     padding-bottom: 0px;
     color: #aaaaaa;
     margin-left: auto;
@@ -185,23 +188,28 @@ footer {
 .modal_window_close:hover,
 .modal_window_close:focus,
 .modal_new_window_close:hover,
-.modal_new_window_close:focus {
+.modal_new_window_close:focus,
+.modal_edit_window_close:hover,
+.modal_edit_window_close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
 .modal_window_middle,
-.modal_new_window_middle {
+.modal_new_window_middle,
+.modal_edit_window_middle {
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
 .modal_window_header,
+.modal_window_header_subtask,
 .modal_new_window_header,
 .modal_new_window_header_subtask,
-.modal_window_header_subtask {
+.modal_edit_window_header,
+.modal_edit_window_header_subtask {
     padding: 8px;
     border-radius: 3px;
     font-weight: bold;
@@ -209,48 +217,56 @@ footer {
 }
 
 .modal_window p,
-.modal_new_window p {
+.modal_new_window p,
+.modal_edit_window p {
     margin-top: 0;
 }
 
 .modal_window_bottom,
-.modal_new_window_bottom {
+.modal_new_window_bottom,
+.modal_edit_window_bottom {
     display: flex;
     color: red;
     justify-content: space-between;
-    margin-top: 0.8em;
+    margin-top: 2em;
 }
 
-.modal_window_delete {
+.modal_window_delete,
+.modal_edit_window_delete {
     color: red;
 }
 
 .modal_window_top,
-.modal_new_window_top {
+.modal_new_window_top,
+.modal_edit_window_top {
     display: flex;
 }
 
 .modal_window_error,
-.modal_new_window_error {
+.modal_new_window_error,
+.modal_edit_window_error {
     padding-top: 18px;
     color: red;
 }
 
 .modal_window_middle,
-.modal_new_middle {
+.modal_new_middle,
+.modal_edit_middle {
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
 .modal_form_input,
-.modal_new_form_input {
+.modal_new_form_input,
+.modal_edit_form_input {
     /* margin-top: 8px; */
     margin-bottom: 14px;
 }
 
 .modal_new_window_subtask,
-.modal_window_subtask {
+.modal_window_subtask,
+.modal_edit_window_subtask {
     margin-top: 12px;
     display: flex;
     gap: 12px;
@@ -258,13 +274,15 @@ footer {
 }
 
 .modal_new_window_subtask_checkbox,
-.modal_window_subtask_checkbox {
+.modal_window_subtask_checkbox,
+.modal_edit_window_subtask_checkbox {
     width: 20px;
     height: 20px;
 }
 
 .modal_new_window_subtask p,
-.modal_window_subtask p {
+.modal_window_subtask p,
+.modal_edit_window_subtask p {
     margin-top: 2px;
 }
 
